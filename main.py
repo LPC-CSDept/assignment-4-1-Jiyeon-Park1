@@ -2,7 +2,7 @@ def main():
     result = []
     while True:
         start = input('Enter the starting letter: ')
-        end = input('Enter the starting letter: ')
+        end = input('Enter the ending letter: ')
         if not start.isalpha() or not end.isalpha():
             print('Make sure its a letter')
             continue
@@ -19,8 +19,8 @@ def main():
     """
     begin = ord(start)
     last = ord(end)
-    for alph in (begin , last + 1):
-        alph.append(result)
+    for alph in range(begin , last + 1):
+        result.append(chr(alph))
 
     print(*result)
 
